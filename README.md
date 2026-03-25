@@ -121,19 +121,3 @@ pip install -r requirements.txt
 Запуск
 python main.py --video video2.mp4
 
-С указанием зоны (ROI):
-
-python main.py --video input.mp4 --roi-json "[[100,100],[500,100],[500,400],[100,400]]"
-
-Если ROI не указать — его можно выбрать мышкой при запуске.
-Extra params
-  --video input.mp4 \                 # путь к входному видео (обязательно)
-  --model yolov8n.pt \               # путь к модели YOLO
-  --device auto \                    # устройство: auto / cpu / cuda
-  --process-every 3 \                # обрабатывать каждый N-й кадр (ускорение)
-  --conf-threshold 0.5 \             # порог уверенности детекции (0–1)
-  --min-box-area-ratio 0.0008 \      # минимальный размер bbox (доля от кадра)
-  --crop-padding-ratio 0.07 \        # отступ вокруг ROI (доля от размера)
-  --state-hold-seconds 1.0 \         # задержка перед сменой состояния (сглаживание)
-  --near-zone-scale 1.20 \           # во сколько раз расширить ROI для near-zone
-  --near-zone-max-offset-px 70       # максимальное расширение near-zone в пикселях
